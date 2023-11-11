@@ -1,0 +1,24 @@
+version: '3'
+name: nifi
+
+services:
+  apache-nifi:
+    image: apache/nifi:1.23.2
+    mem_limit: 2G
+    environment:
+      - NIFI_WEB_HTTP_PORT=18080
+      - NIFI_WEB_HTTP_HOST=0.0.0.0
+      - NIFI_WEB_HTTPS_PORT=
+      - NIFI_WEB_HTTPS_HOST=
+    volumes:
+      - ./nifi/drivers:/opt/nifi/nifi-current/drivers
+      - ./nifi/templates:/opt/nifi/nifi-current/templates
+      - ./nifi/data:/opt/nifi/nifi-current/data
+    networks:
+      - data-engineering-labs-network
+    ports:
+      - 18080:18080
+
+networks:
+  data-engineering-labs-network:
+    external: true

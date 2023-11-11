@@ -1,0 +1,35 @@
+version: '3'
+name: postgresql
+
+services:
+  postgresql-standalone:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: workspace
+    volumes:
+      - postgres-db-workspace-volume:/var/lib/postgresql/data
+    
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "admin"]
+      interval: 10s
+      retries: 5
+      start_period: 5s
+
+  adminer:
+    image: dpage/pgadmin4:7.6
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=pgadmin4@pgadmin.org
+      - PGADMIN_DEFAULT_PASSWORD=admin
+    depends_on:
+      - postgresql-standalone
+    ports:
+      - 18081:80
+
+volumes:
+  postgres-db-workspace-volume:
+
+networks:
+  data-engineering-labs-network:
+    external: true

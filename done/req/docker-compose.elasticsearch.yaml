@@ -1,0 +1,14 @@
+version: '3'
+name: elasticsearch
+
+services:
+  elasticsearch-kibana:
+    image: nshou/elasticsearch-kibana:kibana7
+    ports:
+      - 19200:9200
+      - 15601:5601
+
+networks:
+  default:
+    external: true
+    name: data-engineering-labs-network

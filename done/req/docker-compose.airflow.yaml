@@ -1,0 +1,48 @@
+version: '3'
+name: airflow
+
+services:
+
+  airflow-scheduler:
+    extends:
+      file: airflow/docker-compose.yaml
+      service: airflow-scheduler
+
+  airflow-webserver:
+    extends:
+      file: airflow/docker-compose.yaml
+      service: airflow-webserver
+
+  airflow-worker:
+    extends:
+      file: airflow/docker-compose.yaml
+      service: airflow-worker
+
+  airflow-triggerer:
+    extends:
+      file: airflow/docker-compose.yaml
+      service: airflow-triggerer
+
+  airflow-init:
+    extends:
+      file: airflow/docker-compose.yaml
+      service: airflow-init
+
+  postgres:
+    extends:
+      file: airflow/docker-compose.yaml
+      service: postgres
+
+  redis:
+    extends:
+      file: airflow/docker-compose.yaml
+      service: redis
+
+volumes:
+  postgres-db-volume:
+
+networks:
+  default:
+    external: true
+    name: data-engineering-labs-network
+

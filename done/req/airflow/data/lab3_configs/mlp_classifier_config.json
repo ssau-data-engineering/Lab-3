@@ -1,0 +1,7 @@
+{
+    "model": "MLPClassifier",
+    "parameters": {
+        "hidden_layer_sizes": 200,
+        "learning_rate": "adaptive"
+    }
+}

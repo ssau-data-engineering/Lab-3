@@ -1,0 +1,45 @@
+{
+    "configs": [
+        {
+        "module": "sklearn.neural_network",
+        "classificator": "MLPClassifier",
+        "kwargs": {
+            "hidden_layer_sizes": [20, 100, 20],
+            "activation": "relu",
+            "solver": "adam",
+            "learning_rate": "constant"
+            }
+        },
+        {
+        "module": "sklearn.svm",
+        "classificator": "SVC",
+        "kwargs": {
+            "kernel": "linear",
+            "degree": 4,
+            "gamma": "scale"
+            }
+        },
+        {
+        "module": "sklearn.ensemble",
+        "classificator": "RandomForestClassifier",
+        "kwargs": {
+            "n_estimators": 50,
+            "criterion": "gini",
+            "max_depth": 12
+            }
+        },
+        {
+        "module": "sklearn.cluster",
+        "classificator": "KMeans",
+        "kwargs": {
+            "n_clusters": 8,
+            "max_iter": 150,
+            "algorithm": "elkan"
+            }
+        },
+        {
+        "module": "sklearn.naive_bayes",
+        "classificator": "GaussianNB",
+        "kwargs": { }
+        }]
+}

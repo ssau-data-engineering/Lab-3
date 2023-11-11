@@ -1,0 +1,5 @@
+0,runs:/6bd813da381346608b965a8814e0d7c4/sklearn.neural_network,MLPClassifier
+1,runs:/6bd813da381346608b965a8814e0d7c4/sklearn.svm,SVC
+2,runs:/6bd813da381346608b965a8814e0d7c4/sklearn.ensemble,RandomForestClassifier
+3,runs:/6bd813da381346608b965a8814e0d7c4/sklearn.cluster,KMeans
+4,runs:/6bd813da381346608b965a8814e0d7c4/sklearn.naive_bayes,GaussianNB

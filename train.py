@@ -1,0 +1,46 @@
+import json
+import importlib
+import pandas as pd
+import numpy as np
+from sklearn import datasets
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import f1_score
+
+import mlflow
+import mlflow.sklearn
+from mlflow.models import infer_signature
+
+with open('/opt/airflow/data/conf.json', 'r') as config_file:
+   config_data = json.load(config_file)
+
+
+x_train = np.asarray(pd.read_csv(f"/opt/airflow/data/x_train.csv"), dtype=np.float32)
+y_train = pd.read_csv(f"/opt/airflow/data/y_train.csv")
+
+x_val = np.asarray(pd.read_csv(f"/opt/airflow/data/x_val.csv"), dtype=np.float32)
+y_val = pd.read_csv(f"/opt/airflow/data/y_val.csv")
+
+tracking_url = 'http://mlflow_server:5000'
+mlflow.set_tracking_uri(tracking_url)
+mlflow.set_experiment(experiment_id="0")
+
+with mlflow.start_run() as run:
+    for i, config in enumerate(config_data['configs']):
+        module = importlib.import_module(config['module'])
+        classificator = getattr(module, config['classificator'])
+        model = classificator(**config['args'])
+        model.fit(x_train, y_train)
+        prediction = model.predict(x_val)
+        signature = infer_signature(x_val, prediction)
+    
+        mlflow.log_params(config['args'])
+        mlflow.log_metrics({"f1": f1_score(y_val, prediction, average='weighted')})
+
+        modelInfo = mlflow.sklearn.log_model(
+            sk_model=model, 
+            artifact_path=config['module'], 
+            signature=signature, 
+            registered_model_name=config['classificator'])
+    
+        df = pd.DataFrame({"name":config['classificator'], "uri":modelInfo.model_uri}, index=[i])
+        df.to_csv('/opt/airflow/data/models.csv', mode='a', header=False)

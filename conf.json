@@ -1,0 +1,48 @@
+{
+    "configs": [
+        {
+            "module": "sklearn.linear_model",
+            "classificator": "SGDClassifier",
+            "args": {
+                "loss": "log_loss",
+                "max_iter": 300
+            }
+        },
+        {
+            "module": "sklearn.ensemble",
+            "classificator": "RandomForestClassifier",
+            "args": {
+                "n_estimators": 30,
+                "criterion": "log_loss",
+                "max_depth": 10
+            }
+        },
+        {
+            "module": "sklearn.svm",
+            "classificator": "SVC",
+            "args": {
+                "kernel": "sigmoid",
+                "gamma": "auto"
+            }
+        },
+        {
+            "module": "sklearn.neighbors",
+            "classificator": "KNeighborsClassifier",
+            "args": {
+                "n_neighbors": 7,
+                "weights": "distance",
+                "algorithm": "kd_tree"
+            }
+        },
+        {
+        "module": "sklearn.neural_network",
+        "classificator": "MLPClassifier",
+        "args": {
+            "hidden_layer_sizes": [32, 64, 128, 64, 32 ],
+            "activation": "logistic",
+            "solver": "adam",
+            "learning_rate": "adaptive"
+            }
+        }
+    ]
+}

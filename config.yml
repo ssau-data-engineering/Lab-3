@@ -1,0 +1,36 @@
+---
+model_1:
+    module: sklearn.neural_network
+    classificator: MLPRegressor
+    kwargs:
+        hidden_layer_sizes: [20,100,20]
+        activation: relu
+        solver: adam
+        learning_rate_init: 0.001
+model_2:
+    module: sklearn.ensemble
+    classificator: RandomForestRegressor
+    kwargs:
+        n_estimators: 80
+        max_depth: 5
+        criterion: squared_error
+model_3:
+    module: sklearn.neighbors
+    classificator: KNeighborsRegressor
+    kwargs:
+        n_neighbors: 1
+        weights: uniform
+        algorithm: auto
+model_4:
+    module: sklearn.svm
+    classificator: SVR
+    kwargs:
+        kernel: linear
+        C: 0.1
+        tol: 0.001
+model_5: 
+    module: sklearn.linear_model
+    classificator: LinearRegression
+    kwargs:
+        positive: True
+        copy_X: True

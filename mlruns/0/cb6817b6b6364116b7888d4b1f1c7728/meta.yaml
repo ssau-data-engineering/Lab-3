@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/Users/ralph/AI%20labs/DataEngineering/Data-Engineering-Lab-3/mlruns/0/cb6817b6b6364116b7888d4b1f1c7728/artifacts
+end_time: 1700655575721
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: cb6817b6b6364116b7888d4b1f1c7728
+run_name: useful-bug-89
+run_uuid: cb6817b6b6364116b7888d4b1f1c7728
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1700655569153
+status: 3
+tags: []
+user_id: ralph

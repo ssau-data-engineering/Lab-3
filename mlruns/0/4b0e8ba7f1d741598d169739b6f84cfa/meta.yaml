@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/Users/ralph/AI%20labs/DataEngineering/Data-Engineering-Lab-3/mlruns/0/4b0e8ba7f1d741598d169739b6f84cfa/artifacts
+end_time: 1700655399887
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 4b0e8ba7f1d741598d169739b6f84cfa
+run_name: unruly-bug-184
+run_uuid: 4b0e8ba7f1d741598d169739b6f84cfa
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1700655399835
+status: 4
+tags: []
+user_id: ralph

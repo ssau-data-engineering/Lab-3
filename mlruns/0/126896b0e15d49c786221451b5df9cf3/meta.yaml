@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/Users/ralph/AI%20labs/DataEngineering/Data-Engineering-Lab-3/mlruns/0/126896b0e15d49c786221451b5df9cf3/artifacts
+end_time: 1700655263801
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 126896b0e15d49c786221451b5df9cf3
+run_name: adorable-panda-675
+run_uuid: 126896b0e15d49c786221451b5df9cf3
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1700655263750
+status: 4
+tags: []
+user_id: ralph

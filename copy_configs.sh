@@ -1,0 +1,1 @@
+cp -r configs/* /home/anteii/projects/ssau-data-engineering/Prerequisites/airflow/data/lab3/configs

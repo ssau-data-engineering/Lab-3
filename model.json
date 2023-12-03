@@ -1,0 +1,49 @@
+[
+    {
+        "source": "sklearn.ensemble",
+        "classifier": "RandomForestClassifier",
+        "kwargs": {
+            "n_estimators": 100,
+            "random_state": 42
+        }
+    },
+    {
+        "source": "sklearn.ensemble",
+        "classifier": "GradientBoostingClassifier",
+        "kwargs": {
+            "n_estimators": 100,
+            "max_depth": 3,
+            "learning_rate": 0.1,
+            "random_state": 42
+        }
+    },
+    {
+        "source": "sklearn.svm",
+        "classifier": "SVC",
+        "kwargs": {
+            "kernel": "linear",
+            "C": 1
+        }
+    },
+    {
+        "source": "sklearn.neighbors",
+        "classifier": "KNeighborsClassifier",
+        "kwargs": {
+            "n_neighbors": 5,
+            "weights": "uniform"
+        }
+    },
+    {
+        "source": "sklearn.neural_network",
+        "classifier": "MLPClassifier",
+        "kwargs": {
+            "hidden_layer_sizes": [
+                100,
+                50,
+                10
+            ],
+            "max_iter": 500,
+            "random_state": 42
+        }
+    }
+]

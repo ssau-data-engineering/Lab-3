@@ -25,14 +25,14 @@
         4. Логируем модель, параметры и значения метрик в MLFlow
 
 <p align="center">
-  <img width="800" height="300" src="https://github.com/Anteii/ssau-data-engineering-lab-3/blob/main/screenshots/train-model-airflow.png"/>
+  <img width="800" height="350" src="https://github.com/Anteii/ssau-data-engineering-lab-3/blob/main/screenshots/train-model-airflow.png"/>
 </p>
-<p style="text-align: center">Airflow model training pipline</p>
+<p style="text-align: center;">Airflow model training pipline</p>
 
 <p align="center">
   <img width="800" height="300" src="https://github.com/Anteii/ssau-data-engineering-lab-3/blob/main/screenshots/mlflow-experiment-ui.png"/>
 </p>
-<p style="text-align: center">Эксперимент MLFlow </p>
+<p style="text-align: center;">Эксперимент MLFlow </p>
 
 Проблемы с которыми столкнулся на этом этапе:
 1. MLFlow server не мог приконектиться к S3 из-за чего не показывал артифакты эксперимента. Через python API также не получалось их забрать. Решилось через установку boto3 в контейнере с MLFlow server.
@@ -52,14 +52,14 @@
     8. Модель соответсвующую выбранному рану продвигаем в stage: Production
 
 <p align="center">
-  <img width="800" height="300" src="https://github.com/Anteii/ssau-data-engineering-lab-3/blob/main/screenshots/validate-model-airflow.png>
+  <img width="800" height="300" src="https://github.com/Anteii/ssau-data-engineering-lab-3/blob/main/screenshots/validate-model-airflow.png">
 </p>
-<p style="text-align: center">Пайплайн валидации Airflow</p>
+<p style="text-align: center;">Пайплайн валидации Airflow</p>
 
 <p align="center">
-  <img width="800" height="300" src="https://github.com/Anteii/ssau-data-engineering-lab-3/blob/main/screenshots/mlflow-stage-ui.png"/>
+  <img width="800" height="250" src="https://github.com/Anteii/ssau-data-engineering-lab-3/blob/main/screenshots/mlflow-stage-ui.png"/>
 </p>
-<p style="text-align: center">Staging MLFlow </p>
+<p style="text-align: center;">Staging MLFlow </p>
 
 Проблемы с которыми столкнулся на этом этапе:
 1. При попыте через mlflow python API забрать артифакт падало с ошибкой bad credentials (как решил не помню)

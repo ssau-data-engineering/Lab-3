@@ -1,0 +1,6 @@
+uri,name
+runs:/f8a1a9e64a084560af2333b2be9490d4/sklearn.neural_network,MLPClassifier
+runs:/d79d58137b8047679640091e11815d0f/sklearn.svm,SVC
+runs:/b43419e019e241d4ba848a1d5093947b/sklearn.ensemble,RandomForestClassifier
+runs:/96721c60e4f64f96835b5bfac8b72823/sklearn.cluster,KMeans
+runs:/de09928d1fee42d08cf1ca0a980f7157/sklearn.naive_bayes,GaussianNB

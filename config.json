@@ -1,0 +1,45 @@
+{
+    "configs": [
+        {
+            "module": "sklearn.ensemble",
+            "classificator": "AdaBoostClassifier",
+            "args": {
+                "n_estimators": 50,
+                "learning_rate": 2.0
+            }
+        },
+        {
+            "module": "sklearn.ensemble",
+            "classificator": "RandomForestClassifier",
+            "args": {
+                "n_estimators": 50,
+                "criterion": "log_loss",
+                "max_depth": 5
+            }
+        },
+        {
+            "module": "sklearn.gaussian_process",
+            "classificator": "GaussianProcessClassifier",
+            "args": {
+                "max_iter_predict": 100
+            }
+        },
+        {
+            "module": "sklearn.neighbors",
+            "classificator": "KNeighborsClassifier",
+            "args": {
+                "n_neighbors": 5,
+                "weights": "distance",
+                "algorithm": "brute"
+            }
+        },
+        {
+        "module": "sklearn.neural_network",
+        "classificator": "MLPClassifier",
+        "args": {
+            "activation":"tanh",
+            "solver":"lbfgs"
+            }
+        }
+    ]
+}

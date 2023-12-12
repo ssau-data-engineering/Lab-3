@@ -1,0 +1,43 @@
+{
+    "configs": [
+        {
+            "module":"sklearn.naive_bayes",
+            "classificator":"GaussianNB",
+            "kwargs": {
+                "var_smoothing":0.00000001
+            }
+        },
+        {
+            "module":"sklearn.neighbors",
+            "classificator":"KNeighborsClassifier",
+            "kwargs": {
+                "n_neighbors":4,
+                "weights":"distance",
+                "algorithm":"auto"
+            }
+        },
+        {
+            "module": "sklearn.discriminant_analysis",
+            "classificator":"LinearDiscriminantAnalysis",
+            "kwargs": {
+                "solver":"svd"
+            }
+        },
+        {
+            "module": "sklearn.tree",
+            "classificator": "DecisionTreeClassifier",
+            "kwargs": {
+                "criterion":"gini",
+                "splitter":"best"
+            }
+        },
+        {
+            "module": "sklearn.svm",
+            "classificator": "SVC",
+            "kwargs": {
+                "C":1,
+                "kernel":"poly"
+            }
+        }
+    ]
+}

@@ -1,0 +1,5 @@
+0,GaussianNB,runs:/5d200f98e9154afbb926d6575c1c4bbc/sklearn.naive_bayes
+1,KNeighborsClassifier,runs:/e4f306743a924313b91827d6c6ced4c4/sklearn.neighbors
+2,LinearDiscriminantAnalysis,runs:/82be981aa94a47568c6d62ce4190c566/sklearn.discriminant_analysis
+3,DecisionTreeClassifier,runs:/34e5b2b9912646afa91c2eeb3bd6b678/sklearn.tree
+4,SVC,runs:/afb898a14b9d463e9eb1d1fffc7d39b4/sklearn.svm

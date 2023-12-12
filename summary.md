@@ -2,5 +2,5 @@
 
 Данный репозиторий содержит две основные папки:
 
-solution - само решение лабораторной работы;
-report - отчет по лабораторной работе.
+[solution](https://github.com/Black-Viking-63/Lab-3/tree/main/report) - само решение лабораторной работы;<br>
+[report](https://github.com/Black-Viking-63/Lab-3/tree/main/solution) - отчет по лабораторной работе.

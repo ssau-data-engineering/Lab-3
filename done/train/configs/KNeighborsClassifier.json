@@ -1,0 +1,7 @@
+{
+    "model": "KNeighborsClassifier",
+    "parameters": {
+        "leaf_size":8, 
+        "n_neighbors":5
+    }
+}

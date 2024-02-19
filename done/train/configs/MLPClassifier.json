@@ -1,0 +1,10 @@
+{
+    "model": "MLPClassifire",
+    "parameters": {
+        "hidden_layer_sizes": 128,
+        "max_iter": 100, 
+        "learning_rate_init": 0.005,
+        "random_state": 1
+       
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "model": "SVC",
+    "parameters": {
+        "C": 10.0, 
+        "decision_function_shape": "ovo"
+    }
+}

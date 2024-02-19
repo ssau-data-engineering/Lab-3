@@ -1,0 +1,8 @@
+{
+    "model": "DecisionTreeClassifier",
+    "parameters": {
+        "criterion": "log_loss",
+         "min_samples_leaf": 1, 
+         "min_samples_split": 2
+    }
+}

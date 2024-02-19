@@ -1,0 +1,9 @@
+{
+    "model": "RandomForestClassifier",
+    "parameters": {
+        "n_estimators": 80,
+        "max_depth": 5,
+        "criterion": "log_loss",
+        "random_sate": 42
+    }
+}
